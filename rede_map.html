@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+    <title>Rede Instituto Fab Lab Brasil - Mapa Interativo | Laboratórios de Fabricação Digital</title>
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts otimizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Styles -->
+    <link href="rede.css" rel="stylesheet"/>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Conheça a rede de Fab Labs no Brasil - laboratórios de fabricação digital distribuídos por todo o país, promovendo inovação e educação tecnológica.">
+    <meta name="keywords" content="fab lab, rede brasil, fabricação digital, laboratórios, inovação, tecnologia">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+    
+    <style>
+        /* Estilos específicos para o mapa */
+        .map-container {
+            padding: var(--space-5xl) 0;
+            background: var(--gray-50);
+        }
+        
+        .map-section {
+            display: flex;
+            gap: var(--space-2xl);
+            height: 600px;
+        }
+        
+        .map-sidebar {
+            width: 350px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        
+        .map-content {
+            flex: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .map-filters {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .filter-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--gray-700);
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+        }
+        
+        .filter-btn {
+            padding: var(--space-xs) var(--space-sm);
+            border: 1px solid var(--gray-300);
+            background: var(--white);
+            color: var(--gray-600);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: var(--text-sm);
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+        }
+        
+        .lab-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .lab-item {
+            padding: var(--space-sm);
+            border-bottom: 1px solid var(--gray-200);
+            cursor: pointer;
+            transition: background-color var(--transition-fast);
+        }
+        
+        .lab-item:hover {
+            background: var(--gray-50);
+        }
+        
+        .lab-item.selected {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .lab-name {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        
+        .lab-location {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .lab-item.selected .lab-location {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .lab-description {
+            font-size: var(--text-xs);
+            color: var(--gray-500);
+        }
+        
+        .lab-item.selected .lab-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Popup customizado do Leaflet */
+        .leaflet-popup-content-wrapper {
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .popup-content {
+            padding: var(--space-sm);
+        }
+        
+        .popup-title {
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+            color: var(--primary-color);
+        }
+        
+        .popup-location {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .popup-description {
+            font-size: var(--text-sm);
+            color: var(--gray-700);
+        }
+        
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .map-section {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .map-sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .map-content {
+                height: 400px;
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body class="rede-page">
+    <!-- Skip to content para acessibilidade -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header" role="banner">
+            <div class="container">
+                <!-- Navigation -->
+                <div class="nav-container">
+                    <a href="index.html" class="logo-link">
+                        <img class="logo" src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" alt="Fab Lab Brasil" width="80" height="80"/>
+                    </a>
+                    
+                    <nav class="nav-bar" role="navigation" aria-label="Menu principal">
+                        <ul class="menu" id="main-nav">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Sobre <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="historia.html">Nossa História</a></li>
+                                    <li role="menuitem"><a href="missao-visao.html">Missão e Visão</a></li>
+                                    <li role="menuitem"><a href="equipe.html">Equipe</a></li>
+                                    <li role="menuitem"><a href="instalacoes.html">Instalações</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Serviços <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="educacao.html">Educação</a></li>
+                                    <li role="menuitem"><a href="pesquisa.html">Pesquisa</a></li>
+                                    <li role="menuitem"><a href="consultoria.html">Consultoria</a></li>
+                                    <li role="menuitem"><a href="fabricacao-digital.html">Fabricação Digital</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="projetos.html">Projetos</a></li>
+                            <li class="menu-item"><a href="pesquisas.html">Pesquisas</a></li>
+                            <li class="menu-item"><a href="eventos.html">Eventos</a></li>
+                            <li class="menu-item"><a href="rede.html" class="active">Rede</a></li>
+                            <li class="menu-item"><a href="blog.html">Blog</a></li>
+                            <li class="menu-item"><a href="contato.html">Contato</a></li>
+                            <li class="menu-item search-item">
+                                <button class="search-toggle" aria-label="Abrir busca">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        
+                        <button class="btn-menu" aria-label="Abrir menu mobile" aria-expanded="false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Rede Fab Lab Brasil</h1>
+                        <p>Conheça os laboratórios de fabricação digital espalhados por todo o Brasil, conectando inovadores, makers e empreendedores em uma rede colaborativa de conhecimento e tecnologia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">Fab Labs Ativos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Regiões</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Projetos Realizados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Parcerias</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mapa Interativo -->
+            <section class="map-container">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: var(--space-2xl); font-size: var(--text-4xl);">Mapa Interativo dos Fab Labs</h2>
+                    
+                    <div class="map-section">
+                        <div class="map-sidebar">
+                            <div class="map-filters">
+                                <div class="filter-group">
+                                    <label>Buscar Fab Lab:</label>
+                                    <input type="text" id="search-input" class="search-input" placeholder="Digite o nome ou cidade...">
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <label>Filtrar por Região:</label>
+                                    <div class="filter-buttons">
+                                        <button class="filter-btn active" data-region="all">Todas</button>
+                                        <button class="filter-btn" data-region="Sudeste">Sudeste</button>
+                                        <button class="filter-btn" data-region="Sul">Sul</button>
+                                        <button class="filter-btn" data-region="Nordeste">Nordeste</button>
+                                        <button class="filter-btn" data-region="Centro-Oeste">Centro-Oeste</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="lab-list" id="lab-list">
+                                <!-- Lista de labs será preenchida via JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="map-content">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Faça Parte da Rede</h2>
+                        <p>Junte-se à maior rede de laboratórios de fabricação digital do Brasil e conecte-se com inovadores de todo o país.</p>
+                        <div class="cta-buttons">
+                            <a href="#" class="btn-primary">
+                                <i class="fas fa-plus"></i>
+                                Cadastrar Fab Lab
+                            </a>
+                            <a href="#" class="btn-outline">
+                                <i class="fas fa-envelope"></i>
+                                Entre em Contato
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Dados dos Fab Labs -->
+    <script>
+        const fabLabsData = [
+            {
+                "name": "FAB LAB SP",
+                "location": "São Paulo, SP",
+                "description": "Laboratório pioneiro em fabricação digital na capital paulista.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Garagem Fab Lab",
+                "location": "São Paulo, SP",
+                "description": "Espaço colaborativo focado em inovação e prototipagem.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Insper FAB LAB",
+                "location": "São Paulo, SP",
+                "description": "Primeiro laboratório de fabricação digital em faculdade de engenharia.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Fab LAB Facens",
+                "location": "Sorocaba, SP",
+                "description": "Laboratório acadêmico focado em educação e pesquisa.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.4684836,
+                "longitude": -47.4424129
+            },
+            {
+                "name": "Fab Lab da Firjan SENAI Benfica",
+                "location": "Rio de Janeiro, RJ",
+                "description": "Centro de excelência em fabricação digital da FIRJAN.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -22.9110137,
+                "longitude": -43.2093727
+            },
+            {
+                "name": "Olabi",
+                "location": "Rio de Janeiro, RJ",
+                "description": "Organização focada em democratizar a tecnologia.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -22.9110137,
+                "longitude": -43.2093727
+            },
+            {
+                "name": "13 FabLab Belo Horizonte",
+                "location": "Belo Horizonte, MG",
+                "description": "Laboratório comunitário de fabricação digital.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -19.9227318,
+                "longitude": -43.9450948
+            },
+            {
+                "name": "Fab LAB Newton",
+                "location": "Belo Horizonte, MG",
+                "description": "Espaço de inovação e criatividade tecnológica.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -19.9227318,
+                "longitude": -43.9450948
+            },
+            {
+                "name": "DesignCNC",
+                "location": "São José dos Campos, SP",
+                "description": "Especializado em usinagem CNC e prototipagem.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.1867782,
+                "longitude": -45.8854538
+            },
+            {
+                "name": "Fabrique Lab",
+                "location": "Porto Alegre, RS",
+                "description": "Laboratório colaborativo de fabricação digital.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "FabLab Curitiba",
+                "location": "Curitiba, PR",
+                "description": "Centro de inovação e tecnologia paranaense.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -25.4295963,
+                "longitude": -49.2712724
+            },
+            {
+                "name": "PRONTO3D",
+                "location": "Florianópolis, SC",
+                "description": "Especializado em impressão 3D e prototipagem rápida.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -27.5973002,
+                "longitude": -48.5496098
+            },
+            {
+                "name": "POALAB",
+                "location": "Porto Alegre, RS",
+                "description": "Espaço maker colaborativo gaúcho.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "LIFE - Laboratório de Inovação",
+                "location": "Porto Alegre, RS",
+                "description": "Laboratório da Escola de Engenharia da UFRGS.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "Usina Fab Lab",
+                "location": "Porto Alegre, RS",
+                "description": "Centro de fabricação digital e inovação.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "FabLab Unisul",
+                "location": "Florianópolis, SC",
+                "description": "Laboratório universitário de fabricação digital.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -27.5973002,
+                "longitude": -48.5496098
+            },
+            {
+                "name": "Fab Lab Recife",
+                "location": "Recife, PE",
+                "description": "Centro de inovação tecnológica pernambucano.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -8.0584933,
+                "longitude": -34.8848193
+            },
+            {
+                "name": "Fab Lab Belém",
+                "location": "Belém, PA",
+                "description": "Laboratório amazônico de fabricação digital.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -1.45056,
+                "longitude": -48.4682453
+            },
+            {
+                "name": "Camacari Fab Lab",
+                "location": "Camaçari, BA",
+                "description": "Centro de inovação industrial baiano.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -12.6998188,
+                "longitude": -38.3260762
+            },
+            {
+                "name": "Fab Lab Fortaleza",
+                "location": "Fortaleza, CE",
+                "description": "Laboratório cearense de tecnologia e inovação.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -3.7304512,
+                "longitude": -38.5217989
+            },
+            {
+                "name": "Brasília Fab Lab",
+                "location": "Brasília, DF",
+                "description": "Centro de fabricação digital da capital federal.",
+                "link": "#",
+                "region": "Centro-Oeste",
+                "latitude": -15.7939869,
+                "longitude": -47.8828
+            },
+            {
+                "name": "fab lab.au - UFMT",
+                "location": "Cuiabá, MT",
+                "description": "Laboratório universitário mato-grossense.",
+                "link": "#",
+                "region": "Centro-Oeste",
+                "latitude": -15.5986686,
+                "longitude": -56.0991301
+            }
+        ];
+    </script>
+    
+    <!-- JavaScript do Mapa -->
+    <script src="rede_map.js"></script>
+</body>
+</html>
+

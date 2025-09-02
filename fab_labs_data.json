@@ -1,0 +1,156 @@
+[
+    {
+        "name": "FAB LAB SP",
+        "location": "São Paulo, SP",
+        "description": "Laboratório pioneiro em fabricação digital na capital paulista.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Garagem Fab Lab",
+        "location": "São Paulo, SP",
+        "description": "Espaço colaborativo focado em inovação e prototipagem.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Insper FAB LAB",
+        "location": "São Paulo, SP",
+        "description": "Primeiro laboratório de fabricação digital em faculdade de engenharia.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Fab LAB Facens",
+        "location": "Sorocaba, SP",
+        "description": "Laboratório acadêmico focado em educação e pesquisa.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Fab Lab da Firjan SENAI Benfica",
+        "location": "Rio de Janeiro, RJ",
+        "description": "Centro de excelência em fabricação digital da FIRJAN.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Olabi",
+        "location": "Rio de Janeiro, RJ",
+        "description": "Organização focada em democratizar a tecnologia.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "13 FabLab Belo Horizonte",
+        "location": "Belo Horizonte, MG",
+        "description": "Laboratório comunitário de fabricação digital.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Fab LAB Newton",
+        "location": "Belo Horizonte, MG",
+        "description": "Espaço de inovação e criatividade tecnológica.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "DesignCNC",
+        "location": "São José dos Campos, SP",
+        "description": "Especializado em usinagem CNC e prototipagem.",
+        "link": "#",
+        "region": "Sudeste"
+    },
+    {
+        "name": "Fabrique Lab",
+        "location": "Porto Alegre, RS",
+        "description": "Laboratório colaborativo de fabricação digital.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "FabLab Curitiba",
+        "location": "Curitiba, PR",
+        "description": "Centro de inovação e tecnologia paranaense.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "PRONTO3D",
+        "location": "Florianópolis, SC",
+        "description": "Especializado em impressão 3D e prototipagem rápida.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "POALAB",
+        "location": "Porto Alegre, RS",
+        "description": "Espaço maker colaborativo gaúcho.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "LIFE - Laboratório de Inovação",
+        "location": "Porto Alegre, RS",
+        "description": "Laboratório da Escola de Engenharia da UFRGS.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "Usina Fab Lab",
+        "location": "Porto Alegre, RS",
+        "description": "Centro de fabricação digital e inovação.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "FabLab Unisul",
+        "location": "Florianópolis, SC",
+        "description": "Laboratório universitário de fabricação digital.",
+        "link": "#",
+        "region": "Sul"
+    },
+    {
+        "name": "Fab Lab Recife",
+        "location": "Recife, PE",
+        "description": "Centro de inovação tecnológica pernambucano.",
+        "link": "#",
+        "region": "Nordeste"
+    },
+    {
+        "name": "Fab Lab Belém",
+        "location": "Belém, PA",
+        "description": "Laboratório amazônico de fabricação digital.",
+        "link": "#",
+        "region": "Nordeste"
+    },
+    {
+        "name": "Camacari Fab Lab",
+        "location": "Camaçari, BA",
+        "description": "Centro de inovação industrial baiano.",
+        "link": "#",
+        "region": "Nordeste"
+    },
+    {
+        "name": "Fab Lab Fortaleza",
+        "location": "Fortaleza, CE",
+        "description": "Laboratório cearense de tecnologia e inovação.",
+        "link": "#",
+        "region": "Nordeste"
+    },
+    {
+        "name": "Brasília Fab Lab",
+        "location": "Brasília, DF",
+        "description": "Centro de fabricação digital da capital federal.",
+        "link": "#",
+        "region": "Centro-Oeste"
+    },
+    {
+        "name": "fab lab.au - UFMT",
+        "location": "Cuiabá, MT",
+        "description": "Laboratório universitário mato-grossense.",
+        "link": "#",
+        "region": "Centro-Oeste"
+    }
+]

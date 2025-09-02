@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Instituto Fab Lab Brasil</title>
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link href="projetos.css" rel="stylesheet">
+    
+    <!-- Meta tags essenciais -->
+    <meta name="description" content="Explore nosso portfólio de projetos inovadores em fabricação digital, robótica e IoT. Mais de 500 projetos realizados com impacto social.">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projetos | Instituto Fab Lab Brasil">
+    <meta property="og:description" content="Explore nosso portfólio de projetos inovadores em fabricação digital, robótica e IoT.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&h=630&fit=crop&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body class="page-projetos">
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+
+    <!-- Header igual ao index.html -->
+    <header id="header" role="banner">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo-link">
+                    <img class="logo" src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" alt="Fab Lab Brasil" width="60" height="60"/>
+                </a>
+                
+                <nav class="nav-bar" role="navigation" aria-label="Menu principal">
+                    <ul class="menu" id="main-nav">
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" aria-expanded="false" aria-haspopup="true">
+                                Sobre <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="sub-menu" role="menu">
+                                <li role="menuitem"><a href="historia.html">Nossa História</a></li>
+                                <li role="menuitem"><a href="missao-visao.html">Missão e Visão</a></li>
+                                <li role="menuitem"><a href="equipe.html">Equipe</a></li>
+                                <li role="menuitem"><a href="instalacoes.html">Instalações</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" aria-expanded="false" aria-haspopup="true">
+                                Serviços <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                            <ul class="sub-menu" role="menu">
+                                <li role="menuitem"><a href="educacao.html">Educação</a></li>
+                                <li role="menuitem"><a href="pesquisa.html">Pesquisa</a></li>
+                                <li role="menuitem"><a href="consultoria.html">Consultoria</a></li>
+                                <li role="menuitem"><a href="fabricacao-digital.html">Fabricação Digital</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="projetos.html" aria-current="page">Projetos</a></li>
+                        <li class="menu-item"><a href="pesquisas.html">Pesquisas</a></li>
+                        <li class="menu-item"><a href="eventos.html">Eventos</a></li>
+                        <li class="menu-item"><a href="rede.html">Rede</a></li>
+                        <li class="menu-item"><a href="blog.html">Blog</a></li>
+                        <li class="menu-item"><a href="contato.html">Contato</a></li>
+                        <li class="menu-item search-item">
+                            <button class="search-toggle" aria-label="Abrir busca">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="btn-menu" aria-label="Abrir menu mobile" id="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" 
+                     alt="Laboratório de fabricação digital" 
+                     loading="eager">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <nav class="breadcrumb" aria-label="Navegação estrutural">
+                        <ol>
+                            <li><a href="index.html">Home</a></li>
+                            <li aria-current="page">Projetos</li>
+                        </ol>
+                    </nav>
+                    <h1 class="hero-title">Nossos Projetos</h1>
+                    <p class="hero-description">
+                        Explore nosso portfólio de projetos inovadores que demonstram o poder da fabricação digital 
+                        para transformar ideias em realidade e gerar impacto social positivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">500+</div>
+                        <div class="stat-label">Projetos Realizados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">150+</div>
+                        <div class="stat-label">Empresas Atendidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="25">25+</div>
+                        <div class="stat-label">Prêmios Recebidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="10">10+</div>
+                        <div class="stat-label">Áreas de Atuação</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="impressao-3d">Impressão 3D</button>
+                    <button class="filter-btn" data-filter="robotica">Robótica</button>
+                    <button class="filter-btn" data-filter="iot">IoT</button>
+                    <button class="filter-btn" data-filter="sustentabilidade">Sustentabilidade</button>
+                    <button class="filter-btn" data-filter="saude">Saúde</button>
+                    <button class="filter-btn" data-filter="educacao">Educação</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects">
+            <div class="container">
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be loaded here by JavaScript -->
+                </div>
+                
+                <div class="load-more-container">
+                    <button class="btn-load-more" id="load-more-btn">
+                        <span class="btn-text">Carregar Mais Projetos</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Carregando...
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 id="modal-title" class="modal-title"></h2>
+                <button class="modal-close" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </header>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <div class="modal-tags" id="modal-tags"></div>
+                    <p class="modal-description" id="modal-description"></p>
+                    <div class="modal-meta" id="modal-meta"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Instituto Fab Lab Brasil</h3>
+                    <p>Fomentando a fabricação digital no Brasil através de projetos inovadores em tecnologia, educação e sustentabilidade.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Graça Aranha, 1 - Centro, Rio de Janeiro - RJ</p>
+                        <p><i class="fas fa-phone"></i> (21) 3307-1000</p>
+                        <p><i class="fas fa-envelope"></i> contato@fablabbrasil.org</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Receba as últimas novidades sobre fabricação digital.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <button type="submit" aria-label="Inscrever-se">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Instituto Fab Lab Brasil. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="projetos.js"></script>
+</body>
+</html>
+

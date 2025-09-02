@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+    <title>Rede  Instituto Fab Lab Brasil - Formentando a fabricação digital no Brasil | Laboratórios de Fabricação Digital</title>
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts otimizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Styles -->
+    <link href="style.css" rel="stylesheet"/>
+    <link href="footer-enhanced.css" rel="stylesheet"/>
+    <link href="rede.css" rel="stylesheet"/>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Conheça a rede de Fab Labs no Brasil - laboratórios de fabricação digital distribuídos por todo o país, promovendo inovação e educação tecnológica.">
+    <meta name="keywords" content="fab lab, rede brasil, fabricação digital, laboratórios, inovação, tecnologia">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+</head>
+<body class="rede-page">
+
+<div id="wrapper">
+    <!-- Header -->
+    <header id="header" role="banner">
+        <div class="container">
+
+                <!-- Navigation -->
+                <div class="nav-container">
+                    <a href="index.html" class="logo-link">
+                        <img class="logo" src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" alt="Fab Lab Brasil" width="80" height="80"/>
+                    </a>
+                    
+                    <nav class="nav-bar" role="navigation" aria-label="Menu principal">
+                        <ul class="menu" id="main-nav">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Sobre <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="historia.html">Nossa História</a></li>
+                                    <li role="menuitem"><a href="missao-visao.html">Missão e Visão</a></li>
+                                    <li role="menuitem"><a href="equipe.html">Equipe</a></li>
+                                    <li role="menuitem"><a href="instalacoes.html">Instalações</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Serviços <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="educacao.html">Educação</a></li>
+                                    <li role="menuitem"><a href="pesquisa.html">Pesquisa</a></li>
+                                    <li role="menuitem"><a href="consultoria.html">Consultoria</a></li>
+                                    <li role="menuitem"><a href="fabricacao-digital.html">Fabricação Digital</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="projetos.html">Projetos</a></li>
+                            <li class="menu-item"><a href="pesquisas.html">Pesquisas</a></li>
+                            <li class="menu-item"><a href="eventos.html">Eventos</a></li>
+                            <li class="menu-item"><a href="rede.html" class="active">Rede</a></li>
+                            <li class="menu-item"><a href="blog.html">Blog</a></li>
+                            <li class="menu-item"><a href="contato.html">Contato</a></li>
+                            <li class="menu-item search-item">
+                                <button class="search-toggle" aria-label="Abrir busca">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        
+                        <button class="btn-menu" aria-label="Abrir menu mobile" aria-expanded="false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Rede Fab Lab Brasil</h1>
+                        <p>Conheça os laboratórios de fabricação digital espalhados por todo o Brasil, conectando inovadores, makers e empreendedores em uma rede colaborativa de conhecimento e tecnologia.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Fab Labs Ativos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Estados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Projetos Realizados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Parcerias</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mapa Interativo -->
+            <section class="map-container">
+                <div class="container">
+                    <h2 style="text-align: center; margin-bottom: var(--space-2xl); font-size: var(--text-4xl);">Mapa Interativo dos Fab Labs</h2>
+                    
+                    <div class="map-section">
+                        <div class="map-sidebar">
+                            <div class="map-filters">
+                                <div class="filter-group">
+                                    <label>Buscar Fab Lab:</label>
+                                    <input type="text" id="search-input" class="search-input" placeholder="Digite o nome ou cidade...">
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <label>Filtrar por Região:</label>
+                                    <div class="filter-buttons">
+                                        <button class="filter-btn active" data-region="all">Todas</button>
+                                        <button class="filter-btn" data-region="Sudeste">Sudeste</button>
+                                        <button class="filter-btn" data-region="Sul">Sul</button>
+                                        <button class="filter-btn" data-region="Nordeste">Nordeste</button>
+                                        <button class="filter-btn" data-region="Centro-Oeste">Centro-Oeste</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="lab-list" id="lab-list">
+                                <!-- Lista de labs será preenchida via JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="map-content">
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Labs Grid -->
+            <section class="labs-section">
+                <div class="container">
+                    <h2>Fab Labs pelo Brasil</h2>
+                    <div class="labs-grid">
+                        <!-- Região Sudeste -->
+                        <div class="region-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Região Sudeste</h3>
+                            <div class="labs-list">
+                                <div class="lab-card">
+                                    <h4>FAB LAB SP</h4>
+                                    <p><i class="fas fa-location-dot"></i> São Paulo, São Paulo</p>
+                                    <p>Laboratório pioneiro em fabricação digital na capital paulista.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Garagem Fab Lab</h4>
+                                    <p><i class="fas fa-location-dot"></i> São Paulo, SP</p>
+                                    <p>Espaço colaborativo focado em inovação e prototipagem.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Insper FAB LAB</h4>
+                                    <p><i class="fas fa-location-dot"></i> São Paulo, São Paulo</p>
+                                    <p>Primeiro laboratório de fabricação digital em faculdade de engenharia.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Fab LAB Facens</h4>
+                                    <p><i class="fas fa-location-dot"></i> Sorocaba, SP</p>
+                                    <p>Laboratório acadêmico focado em educação e pesquisa.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Fab Lab da Firjan SENAI Benfica</h4>
+                                    <p><i class="fas fa-location-dot"></i> Rio de Janeiro, RJ</p>
+                                    <p>Centro de excelência em fabricação digital da FIRJAN.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Olabi</h4>
+                                    <p><i class="fas fa-location-dot"></i> Rio de Janeiro, RJ</p>
+                                    <p>Organização focada em democratizar a tecnologia.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>13 FabLab Belo Horizonte</h4>
+                                    <p><i class="fas fa-location-dot"></i> Belo Horizonte, MG</p>
+                                    <p>Laboratório comunitário de fabricação digital.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Fab LAB Newton</h4>
+                                    <p><i class="fas fa-location-dot"></i> Belo Horizonte, MG</p>
+                                    <p>Espaço de inovação e criatividade tecnológica.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>DesignCNC</h4>
+                                    <p><i class="fas fa-location-dot"></i> São José dos Campos, SP</p>
+                                    <p>Especializado em usinagem CNC e prototipagem.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Região Sul -->
+                        <div class="region-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Região Sul</h3>
+                            <div class="labs-list">
+                                <div class="lab-card">
+                                    <h4>Fabrique Lab</h4>
+                                    <p><i class="fas fa-location-dot"></i> Porto Alegre, RS</p>
+                                    <p>Laboratório colaborativo de fabricação digital.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>FabLab Curitiba</h4>
+                                    <p><i class="fas fa-location-dot"></i> Curitiba, PR</p>
+                                    <p>Centro de inovação e tecnologia paranaense.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>PRONTO3D</h4>
+                                    <p><i class="fas fa-location-dot"></i> Florianópolis, SC</p>
+                                    <p>Especializado em impressão 3D e prototipagem rápida.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>POALAB</h4>
+                                    <p><i class="fas fa-location-dot"></i> Porto Alegre, RS</p>
+                                    <p>Espaço maker colaborativo gaúcho.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>LIFE - Laboratório de Inovação</h4>
+                                    <p><i class="fas fa-location-dot"></i> Porto Alegre, RS</p>
+                                    <p>Laboratório da Escola de Engenharia da UFRGS.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Usina Fab Lab</h4>
+                                    <p><i class="fas fa-location-dot"></i> Porto Alegre, RS</p>
+                                    <p>Centro de fabricação digital e inovação.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>FabLab Unisul</h4>
+                                    <p><i class="fas fa-location-dot"></i> Florianópolis, SC</p>
+                                    <p>Laboratório universitário de fabricação digital.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Região Nordeste -->
+                        <div class="region-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Região Nordeste</h3>
+                            <div class="labs-list">
+                                <div class="lab-card">
+                                    <h4>Fab Lab Recife</h4>
+                                    <p><i class="fas fa-location-dot"></i> Recife, PE</p>
+                                    <p>Centro de inovação tecnológica pernambucano.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Fab Lab Belém</h4>
+                                    <p><i class="fas fa-location-dot"></i> Belém, PA</p>
+                                    <p>Laboratório amazônico de fabricação digital.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Camacari Fab Lab</h4>
+                                    <p><i class="fas fa-location-dot"></i> Camaçari, BA</p>
+                                    <p>Centro de inovação industrial baiano.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>Fab Lab Fortaleza</h4>
+                                    <p><i class="fas fa-location-dot"></i> Fortaleza, CE</p>
+                                    <p>Laboratório cearense de tecnologia e inovação.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Região Centro-Oeste -->
+                        <div class="region-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Região Centro-Oeste</h3>
+                            <div class="labs-list">
+                                <div class="lab-card">
+                                    <h4>Brasília Fab Lab</h4>
+                                    <p><i class="fas fa-location-dot"></i> Brasília, DF</p>
+                                    <p>Centro de fabricação digital da capital federal.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                                <div class="lab-card">
+                                    <h4>fab lab.au - UFMT</h4>
+                                    <p><i class="fas fa-location-dot"></i> Cuiabá, MT</p>
+                                    <p>Laboratório universitário mato-grossense.</p>
+                                    <a href="#" class="btn-outline">Saiba mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2>Faça Parte da Rede</h2>
+                        <p>Interessado em criar um Fab Lab na sua região ou fazer parte da nossa rede? Entre em contato conosco e descubra como podemos colaborar.</p>
+                        <div class="cta-buttons">
+                            <a href="contato.html" class="btn-primary">Entre em Contato</a>
+                            <a href="#" class="btn-outline">Baixar Guia</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-enhanced">
+            <div class="footer-container">
+                <!-- Seção Superior -->
+                <div class="footer-top">
+                    <div class="footer-grid">
+                        <!-- Seção da Marca -->
+                        <div class="footer-brand">
+                            <a href="index.html" class="footer-logo">
+                                <div class="footer-logo">
+                        <img src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" alt="Fab Lab Brasil" width="80" height="80">
+                                </div>
+                                <div class="footer-logo-text"> Instituto Fab Lab Brasil</div>
+                            </a>
+                            
+                            <p class="footer-description">
+                                Centro de pesquisa, educação e inovação da FIRJAN que desenvolve talentos e capacitação para o futuro da indústria brasileira através de fabricação digital e tecnologias emergentes.
+                            </p>
+                            <!-- Redes Sociais -->
+                            <div class="footer-social">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            
+                            <!-- Certificações -->
+                            <div class="footer-certifications">
+                                <div class="certification-badge" title="Fab Foundation">FAB</div>
+                                <div class="certification-badge" title="FIRJAN">FIRJAN</div>
+                                <div class="certification-badge" title="ISO 9001">ISO</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Seção Programas -->
+                        <div class="footer-section">
+                            <h4>Programas</h4>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-graduation-cap"></i> MDEF</a></li>
+                                <li><a href="#"><i class="fas fa-certificate"></i> Fab Academy</a></li>
+                                <li><a href="#"><i class="fas fa-tools"></i> Workshops</a></li>
+                                <li><a href="#"><i class="fas fa-laptop"></i> Cursos Online</a></li>
+                                <li><a href="#"><i class="fas fa-users"></i> Mentoria</a></li>
+                                <li><a href="#"><i class="fas fa-handshake"></i> Parcerias</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Sobre -->
+                        <div class="footer-section">
+                            <h4>Sobre</h4>
+                            <ul>
+                                <li><a href="historia.html"><i class="fas fa-history"></i> Nossa História</a></li>
+                                <li><a href="equipe.html"><i class="fas fa-users"></i> Equipe</a></li>
+                                <li><a href="missao-visao.html"><i class="fas fa-bullseye"></i> Missão & Visão</a></li>
+                                <li><a href="instalacoes.html"><i class="fas fa-building"></i> Instalações</a></li>
+                                <li><a href="projetos.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Serviços -->
+                        <div class="footer-section">
+                            <h4>Serviços</h4>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-cube"></i> Impressão 3D</a></li>
+                                <li><a href="#"><i class="fas fa-cut"></i> Corte a Laser</a></li>
+                                <li><a href="#"><i class="fas fa-cogs"></i> CNC</a></li>
+                                <li><a href="#"><i class="fas fa-microchip"></i> Eletrônica</a></li>
+                                <li><a href="#"><i class="fas fa-robot"></i> Robótica</a></li>
+                                <li><a href="#"><i class="fas fa-lightbulb"></i> Consultoria</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Contato e Newsletter -->
+                        <div class="footer-section">
+                            <!-- Informações de Contato -->
+                            <h4>Contato</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Endereço</strong><br>
+                                        Av. Graça Aranha, 1 - Centro<br>
+                                        Rio de Janeiro - RJ
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Telefone</strong><br>
+                                        (21) 3307-1000
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <strong>E-mail</strong><br>
+                                        contato@fablabbrasil.org
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Horário</strong><br>
+                                        Seg-Sex: 8h às 18h
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Newsletter -->
+                            <div class="footer-newsletter">
+                                <h5 class="newsletter-title">Newsletter</h5>
+                                <p class="newsletter-description">
+                                    Receba as últimas novidades sobre fabricação digital, cursos e eventos.
+                                </p>
+                                <form class="newsletter-form" id="newsletterForm">
+                                    <input 
+                                        type="email" 
+                                        class="newsletter-input" 
+                                        placeholder="Seu melhor e-mail"
+                                        required
+                                        aria-label="E-mail para newsletter"
+                                        id="newsletterEmail"
+                                    >
+                                    <button 
+                                        type="submit" 
+                                        class="newsletter-btn"
+                                        aria-label="Inscrever-se na newsletter"
+                                        id="newsletterBtn"
+                                    >
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção Inferior -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="footer-copyright">
+                            <p>&copy; 2025  Instituto Fab Lab Brasil - Formentando a fabricação digital no Brasil Brasil - Todos os direitos reservados.</p>
+                        </div>
+                        
+                        <div class="footer-legal">
+                            <a href="#">Política de Privacidade</a>
+                            <a href="#">Termos de Uso</a>
+                            <a href="#">Cookies</a>
+                            <a href="contato.html">Contato</a>
+                            <a href="#">Acessibilidade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Dados dos Fab Labs -->
+    <script>
+        const fabLabsData = [
+            {
+                "name": "FAB LAB SP",
+                "location": "São Paulo, SP",
+                "description": "Laboratório pioneiro em fabricação digital na capital paulista.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Garagem Fab Lab",
+                "location": "São Paulo, SP",
+                "description": "Espaço colaborativo focado em inovação e prototipagem.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Insper FAB LAB",
+                "location": "São Paulo, SP",
+                "description": "Primeiro laboratório de fabricação digital em faculdade de engenharia.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.5506507,
+                "longitude": -46.6333824
+            },
+            {
+                "name": "Fab LAB Facens",
+                "location": "Sorocaba, SP",
+                "description": "Laboratório acadêmico focado em educação e pesquisa.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.4684836,
+                "longitude": -47.4424129
+            },
+            {
+                "name": "Fab Lab da Firjan SENAI Benfica",
+                "location": "Rio de Janeiro, RJ",
+                "description": "Centro de excelência em fabricação digital da FIRJAN.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -22.9110137,
+                "longitude": -43.2093727
+            },
+            {
+                "name": "Olabi",
+                "location": "Rio de Janeiro, RJ",
+                "description": "Organização focada em democratizar a tecnologia.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -22.9110137,
+                "longitude": -43.2093727
+            },
+            {
+                "name": "13 FabLab Belo Horizonte",
+                "location": "Belo Horizonte, MG",
+                "description": "Laboratório comunitário de fabricação digital.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -19.9227318,
+                "longitude": -43.9450948
+            },
+            {
+                "name": "Fab LAB Newton",
+                "location": "Belo Horizonte, MG",
+                "description": "Espaço de inovação e criatividade tecnológica.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -19.9227318,
+                "longitude": -43.9450948
+            },
+            {
+                "name": "DesignCNC",
+                "location": "São José dos Campos, SP",
+                "description": "Especializado em usinagem CNC e prototipagem.",
+                "link": "#",
+                "region": "Sudeste",
+                "latitude": -23.1867782,
+                "longitude": -45.8854538
+            },
+            {
+                "name": "Fabrique Lab",
+                "location": "Porto Alegre, RS",
+                "description": "Laboratório colaborativo de fabricação digital.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "FabLab Curitiba",
+                "location": "Curitiba, PR",
+                "description": "Centro de inovação e tecnologia paranaense.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -25.4295963,
+                "longitude": -49.2712724
+            },
+            {
+                "name": "PRONTO3D",
+                "location": "Florianópolis, SC",
+                "description": "Especializado em impressão 3D e prototipagem rápida.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -27.5973002,
+                "longitude": -48.5496098
+            },
+            {
+                "name": "POALAB",
+                "location": "Porto Alegre, RS",
+                "description": "Espaço maker colaborativo gaúcho.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "LIFE - Laboratório de Inovação",
+                "location": "Porto Alegre, RS",
+                "description": "Laboratório da Escola de Engenharia da UFRGS.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "Usina Fab Lab",
+                "location": "Porto Alegre, RS",
+                "description": "Centro de fabricação digital e inovação.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -30.0324999,
+                "longitude": -51.2303767
+            },
+            {
+                "name": "FabLab Unisul",
+                "location": "Florianópolis, SC",
+                "description": "Laboratório universitário de fabricação digital.",
+                "link": "#",
+                "region": "Sul",
+                "latitude": -27.5973002,
+                "longitude": -48.5496098
+            },
+            {
+                "name": "Fab Lab Recife",
+                "location": "Recife, PE",
+                "description": "Centro de inovação tecnológica pernambucano.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -8.0584933,
+                "longitude": -34.8848193
+            },
+            {
+                "name": "Fab Lab Belém",
+                "location": "Belém, PA",
+                "description": "Laboratório amazônico de fabricação digital.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -1.45056,
+                "longitude": -48.4682453
+            },
+            {
+                "name": "Camacari Fab Lab",
+                "location": "Camaçari, BA",
+                "description": "Centro de inovação industrial baiano.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -12.6998188,
+                "longitude": -38.3260762
+            },
+            {
+                "name": "Fab Lab Fortaleza",
+                "location": "Fortaleza, CE",
+                "description": "Laboratório cearense de tecnologia e inovação.",
+                "link": "#",
+                "region": "Nordeste",
+                "latitude": -3.7304512,
+                "longitude": -38.5217989
+            },
+            {
+                "name": "Brasília Fab Lab",
+                "location": "Brasília, DF",
+                "description": "Centro de fabricação digital da capital federal.",
+                "link": "#",
+                "region": "Centro-Oeste",
+                "latitude": -15.7939869,
+                "longitude": -47.8828
+            },
+            {
+                "name": "fab lab.au - UFMT",
+                "location": "Cuiabá, MT",
+                "description": "Laboratório universitário mato-grossense.",
+                "link": "#",
+                "region": "Centro-Oeste",
+                "latitude": -15.5986686,
+                "longitude": -56.0991301
+            }
+        ];
+    </script>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="footer-enhanced.js"></script>
+    <script src="rede.js"></script>
+</body>
+</html>
+

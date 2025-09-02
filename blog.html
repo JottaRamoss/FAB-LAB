@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acompanhe as últimas novidades, tendências e insights sobre fabricação digital, inovação e tecnologias emergentes no blog do Fab Lab Brasil.">
+    <meta name="keywords" content="blog fab lab, fabricação digital, inovação, tecnologia, tendências, insights, FIRJAN, artigos">
+    <meta name="author" content="FIRJAN - Fab Lab Brasil">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://institutofablabbrasil.org/blog">
+    <meta property="og:title" content="Blog | Instituto Fab Lab Brasil">
+    <meta property="og:description" content="Fique por dentro das últimas novidades e tendências em fabricação digital e inovação tecnológica.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=630&fit=crop">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://institutofablabbrasil.org/blog">
+    <meta property="twitter:title" content="Blog | Instituto Fab Lab Brasil">
+    <meta property="twitter:description" content="Fique por dentro das últimas novidades e tendências em fabricação digital e inovação tecnológica.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=630&fit=crop">
+    
+    <title>Blog | Instituto Fab Lab Brasil - Fomentando a fabricação digital no Brasil</title>
+    
+    <!-- Preconnect para otimização de performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- DNS Prefetch para recursos externos -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Fonts otimizadas com display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome com integrity para segurança -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+          integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Stylesheets -->
+    <link href="style.css" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet">
+    <link href="footer-enhanced.css" rel="stylesheet">
+    
+    <!-- Favicon melhorado -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+</head>
+
+<body class="page-blog">
+    <!-- Skip to content para acessibilidade -->
+    <a href="#main-content" class="skip-to-content sr-only sr-only-focusable">
+        Pular para o conteúdo principal
+    </a>
+
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header" role="banner">
+            <div class="container">
+                <div class="nav-container">
+                    <a href="index.html" class="logo-link" aria-label="Ir para página inicial">
+                        <img class="logo" 
+                             src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" 
+                             alt="Logo do Instituto Fab Lab Brasil" 
+                             width="60" 
+                             height="60"
+                             loading="eager">
+                    </a>
+                    
+                    <nav class="nav-bar" role="navigation" aria-label="Menu principal">
+                        <ul class="menu" id="main-nav">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Sobre <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="historia.html">Nossa História</a></li>
+                                    <li role="menuitem"><a href="missao-visao.html">Missão e Visão</a></li>
+                                    <li role="menuitem"><a href="equipe.html">Equipe</a></li>
+                                    <li role="menuitem"><a href="instalacoes.html">Instalações</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" aria-expanded="false" aria-haspopup="true">
+                                    Serviços <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="sub-menu" role="menu">
+                                    <li role="menuitem"><a href="educacao.html">Educação</a></li>
+                                    <li role="menuitem"><a href="pesquisa.html">Pesquisa</a></li>
+                                    <li role="menuitem"><a href="consultoria.html">Consultoria</a></li>
+                                    <li role="menuitem"><a href="fabricacao-digital.html">Fabricação Digital</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="projetos.html">Projetos</a></li>
+                            <li class="menu-item"><a href="pesquisas.html">Pesquisas</a></li>
+                            <li class="menu-item"><a href="eventos.html">Eventos</a></li>
+                            <li class="menu-item"><a href="rede.html">Rede</a></li>
+                            <li class="menu-item"><a href="blog.html" aria-current="page">Blog</a></li>
+                            <li class="menu-item"><a href="contato.html">Contato</a></li>
+                            <li class="menu-item search-item">
+                                <button class="search-toggle" aria-label="Abrir busca" aria-expanded="false">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        
+                        <button class="btn-menu" aria-label="Abrir menu mobile" aria-expanded="false" aria-controls="main-nav">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Search Popup -->
+            <div class="search-popup" role="dialog" aria-labelledby="search-title" aria-hidden="true" aria-modal="true">
+                <div class="container">
+                    <h2 id="search-title" class="sr-only">Buscar no site</h2>
+                    <div class="search-form">
+                        <form action="/busca" method="get" role="search">
+                            <label for="search-input" class="sr-only">Digite sua busca</label>
+                            <input id="search-input" 
+                                   class="form-control" 
+                                   name="q" 
+                                   placeholder="O que você está procurando?" 
+                                   type="search" 
+                                   aria-describedby="search-help"
+                                   autocomplete="off"
+                                   spellcheck="false">
+                            <div id="search-help" class="sr-only">
+                                Digite palavras-chave para buscar artigos, projetos e conteúdos
+                            </div>
+                            <button class="btn-search" type="submit" aria-label="Executar busca">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <button class="btn-close" aria-label="Fechar busca">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="page-hero" aria-labelledby="hero-title">
+                <div class="container">
+                    <div class="hero-content">
+                        <nav class="breadcrumb" aria-label="Navegação estrutural">
+                            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <a itemprop="item" href="index.html">
+                                        <span itemprop="name">Home</span>
+                                    </a>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                                    <span itemprop="name">Blog</span>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ol>
+                        </nav>
+                        <h1 id="hero-title" class="hero-title">Blog</h1>
+                        <p class="hero-description">
+                            Fique por dentro das últimas novidades, tendências e insights sobre fabricação digital, inovação e tecnologias emergentes.
+                        </p>
+                    </div>
+                </div>
+                <div class="hero-bg" 
+                     style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"
+                     role="img" 
+                     aria-label="Imagem de fundo mostrando tecnologia e inovação"></div>
+            </section>
+
+            <!-- Featured Post -->
+            <section class="section-featured-post" aria-labelledby="featured-title">
+                <div class="container">
+                    <h2 id="featured-title" class="sr-only">Artigo em destaque</h2>
+                    <article class="featured-post" data-aos="fade-up">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Ilustração sobre o futuro da fabricação digital" 
+                                 loading="lazy"
+                                 width="1200"
+                                 height="600">
+                            <div class="post-category">
+                                <span class="category-tag">Tendências</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <time class="meta-item" datetime="2024-01-15">
+                                    <i class="fas fa-calendar" aria-hidden="true"></i>
+                                    15 de Janeiro, 2024
+                                </time>
+                                <span class="meta-item">
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    Dr. Carlos Silva
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    8 min de leitura
+                                </span>
+                            </div>
+                            <h3>
+                                <a href="artigo-futuro-fabricacao-digital.html">
+                                    O Futuro da Fabricação Digital: Tendências para 2024
+                                </a>
+                            </h3>
+                            <p>
+                                Explore as principais tendências que estão moldando o futuro da fabricação digital, desde a impressão 3D em metal 
+                                até a integração de inteligência artificial nos processos produtivos. Descubra como essas inovações estão 
+                                transformando a indústria brasileira.
+                            </p>
+                            <a href="artigo-futuro-fabricacao-digital.html" class="btn-primary">
+                                <span>Ler Artigo Completo</span>
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Blog Categories -->
+            <section class="section-categories" aria-labelledby="categories-title">
+                <div class="container">
+                    <h2 id="categories-title" class="sr-only">Categorias do blog</h2>
+                    <div class="categories-grid">
+                        <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="category-icon" aria-hidden="true">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <h3>Impressão 3D</h3>
+                            <p>Novidades e técnicas em manufatura aditiva</p>
+                            <span class="post-count" aria-label="24 artigos nesta categoria">24 artigos</span>
+                        </div>
+
+                        <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="category-icon" aria-hidden="true">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Robótica</h3>
+                            <p>Automação e sistemas robóticos</p>
+                            <span class="post-count" aria-label="18 artigos nesta categoria">18 artigos</span>
+                        </div>
+
+                        <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="category-icon" aria-hidden="true">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3>IoT</h3>
+                            <p>Internet das Coisas e conectividade</p>
+                            <span class="post-count" aria-label="15 artigos nesta categoria">15 artigos</span>
+                        </div>
+
+                        <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="category-icon" aria-hidden="true">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Inovação</h3>
+                            <p>Tendências e insights do mercado</p>
+                            <span class="post-count" aria-label="32 artigos nesta categoria">32 artigos</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Posts -->
+            <section class="section-recent-posts" aria-labelledby="recent-posts-title">
+                <div class="container">
+                    <div class="blog-layout">
+                        <div class="blog-main">
+                            <header class="section-header">
+                                <h2 id="recent-posts-title">Artigos Recentes</h2>
+                                <p>Confira nossos últimos artigos sobre fabricação digital e inovação</p>
+                            </header>
+
+                            <div class="posts-grid" role="feed" aria-label="Lista de artigos recentes">
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Equipamento de impressão 3D em metal em funcionamento" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">Impressão 3D</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2024-01-10">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                10 de Janeiro, 2024
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                5 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-impressao-3d-metal.html">
+                                                Impressão 3D em Metal: Revolucionando a Produção Industrial
+                                            </a>
+                                        </h3>
+                                        <p>Descubra como a impressão 3D em metal está transformando a fabricação de componentes complexos...</p>
+                                        <a href="artigo-impressao-3d-metal.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Robô colaborativo trabalhando ao lado de humanos" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">Robótica</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2024-01-08">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                8 de Janeiro, 2024
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                7 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-robotica-colaborativa.html">
+                                                Robótica Colaborativa: O Futuro da Automação Industrial
+                                            </a>
+                                        </h3>
+                                        <p>Explore como os robôs colaborativos estão mudando a dinâmica das fábricas modernas...</p>
+                                        <a href="artigo-robotica-colaborativa.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Dispositivos IoT conectados em rede" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">IoT</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2024-01-05">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                5 de Janeiro, 2024
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                6 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-iot-industria-40.html">
+                                                IoT na Indústria 4.0: Conectando o Futuro da Produção
+                                            </a>
+                                        </h3>
+                                        <p>Entenda como a Internet das Coisas está revolucionando os processos industriais...</p>
+                                        <a href="artigo-iot-industria-40.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Laboratório de inovação com equipamentos modernos" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">Inovação</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2024-01-03">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                3 de Janeiro, 2024
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                4 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-startups-fabricacao-digital.html">
+                                                Startups Brasileiras na Fabricação Digital: Cases de Sucesso
+                                            </a>
+                                        </h3>
+                                        <p>Conheça as startups nacionais que estão inovando no setor de fabricação digital...</p>
+                                        <a href="artigo-startups-fabricacao-digital.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Prototipagem rápida com impressora 3D" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">Prototipagem</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2024-01-01">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                1 de Janeiro, 2024
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                5 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-prototipagem-rapida.html">
+                                                Prototipagem Rápida: Acelerando a Inovação de Produtos
+                                            </a>
+                                        </h3>
+                                        <p>Saiba como a prototipagem rápida está transformando o desenvolvimento de produtos...</p>
+                                        <a href="artigo-prototipagem-rapida.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="post-card" data-aos="fade-up" data-aos-delay="600">
+                                    <div class="post-image">
+                                        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                             alt="Sustentabilidade na fabricação digital" 
+                                             loading="lazy"
+                                             width="600"
+                                             height="400">
+                                        <div class="post-category">
+                                            <span class="category-tag">Sustentabilidade</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <time class="meta-item" datetime="2023-12-28">
+                                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                                28 de Dezembro, 2023
+                                            </time>
+                                            <span class="meta-item">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                6 min
+                                            </span>
+                                        </div>
+                                        <h3>
+                                            <a href="artigo-sustentabilidade-fabricacao.html">
+                                                Sustentabilidade na Fabricação Digital: Reduzindo o Impacto Ambiental
+                                            </a>
+                                        </h3>
+                                        <p>Descubra como as tecnologias de fabricação digital contribuem para um futuro mais sustentável...</p>
+                                        <a href="artigo-sustentabilidade-fabricacao.html" class="read-more">
+                                            Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Pagination -->
+                            <nav class="pagination" aria-label="Navegação de páginas" role="navigation">
+                                <a href="#" class="pagination-btn" aria-label="Página anterior" aria-disabled="true">
+                                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="pagination-btn active" aria-label="Página 1" aria-current="page">1</a>
+                                <a href="#" class="pagination-btn" aria-label="Página 2">2</a>
+                                <a href="#" class="pagination-btn" aria-label="Página 3">3</a>
+                                <span class="pagination-ellipsis" aria-hidden="true">...</span>
+                                <a href="#" class="pagination-btn" aria-label="Página 10">10</a>
+                                <a href="#" class="pagination-btn" aria-label="Próxima página">
+                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </nav>
+                        </div>
+
+                        <!-- Sidebar -->
+                        <aside class="blog-sidebar" role="complementary" aria-label="Barra lateral do blog">
+                            <!-- Search Widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">Buscar Artigos</h3>
+                                <form class="search-widget" role="search" action="/busca" method="get">
+                                    <label for="sidebar-search" class="sr-only">Buscar artigos</label>
+                                    <input id="sidebar-search" 
+                                           class="search-input" 
+                                           type="search" 
+                                           name="q" 
+                                           placeholder="Digite sua busca..."
+                                           autocomplete="off">
+                                    <button class="search-btn" type="submit" aria-label="Buscar">
+                                        <i class="fas fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Categories Widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">Categorias</h3>
+                                <ul class="categories-list">
+                                    <li>
+                                        <a href="/categoria/impressao-3d">
+                                            Impressão 3D
+                                            <span class="category-count">24</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/categoria/robotica">
+                                            Robótica
+                                            <span class="category-count">18</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/categoria/iot">
+                                            IoT
+                                            <span class="category-count">15</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/categoria/inovacao">
+                                            Inovação
+                                            <span class="category-count">32</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/categoria/sustentabilidade">
+                                            Sustentabilidade
+                                            <span class="category-count">12</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/categoria/prototipagem">
+                                            Prototipagem
+                                            <span class="category-count">9</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Recent Posts Widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">Posts Recentes</h3>
+                                <div class="recent-posts">
+                                    <article class="recent-post">
+                                        <div class="recent-post-image">
+                                            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" 
+                                                 alt="Miniatura do artigo sobre futuro da fabricação digital" 
+                                                 loading="lazy"
+                                                 width="60"
+                                                 height="60">
+                                        </div>
+                                        <div class="recent-post-content">
+                                            <h4 class="recent-post-title">
+                                                <a href="artigo-futuro-fabricacao-digital.html">
+                                                    O Futuro da Fabricação Digital
+                                                </a>
+                                            </h4>
+                                            <time class="recent-post-date" datetime="2024-01-15">15 de Janeiro, 2024</time>
+                                        </div>
+                                    </article>
+
+                                    <article class="recent-post">
+                                        <div class="recent-post-image">
+                                            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" 
+                                                 alt="Miniatura do artigo sobre impressão 3D em metal" 
+                                                 loading="lazy"
+                                                 width="60"
+                                                 height="60">
+                                        </div>
+                                        <div class="recent-post-content">
+                                            <h4 class="recent-post-title">
+                                                <a href="artigo-impressao-3d-metal.html">
+                                                    Impressão 3D em Metal
+                                                </a>
+                                            </h4>
+                                            <time class="recent-post-date" datetime="2024-01-10">10 de Janeiro, 2024</time>
+                                        </div>
+                                    </article>
+
+                                    <article class="recent-post">
+                                        <div class="recent-post-image">
+                                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" 
+                                                 alt="Miniatura do artigo sobre robótica colaborativa" 
+                                                 loading="lazy"
+                                                 width="60"
+                                                 height="60">
+                                        </div>
+                                        <div class="recent-post-content">
+                                            <h4 class="recent-post-title">
+                                                <a href="artigo-robotica-colaborativa.html">
+                                                    Robótica Colaborativa
+                                                </a>
+                                            </h4>
+                                            <time class="recent-post-date" datetime="2024-01-08">8 de Janeiro, 2024</time>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+
+                            <!-- Tags Widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="widget-title">Tags Populares</h3>
+                                <div class="tags-cloud">
+                                    <a href="/tag/impressao-3d" class="tag-item">Impressão 3D</a>
+                                    <a href="/tag/robotica" class="tag-item">Robótica</a>
+                                    <a href="/tag/iot" class="tag-item">IoT</a>
+                                    <a href="/tag/industria-40" class="tag-item">Indústria 4.0</a>
+                                    <a href="/tag/inovacao" class="tag-item">Inovação</a>
+                                    <a href="/tag/sustentabilidade" class="tag-item">Sustentabilidade</a>
+                                    <a href="/tag/prototipagem" class="tag-item">Prototipagem</a>
+                                    <a href="/tag/automacao" class="tag-item">Automação</a>
+                                    <a href="/tag/tecnologia" class="tag-item">Tecnologia</a>
+                                    <a href="/tag/fab-lab" class="tag-item">Fab Lab</a>
+                                </div>
+                            </div>
+
+                            <!-- Newsletter Widget -->
+                            <div class="sidebar-widget newsletter-widget">
+                                <h3 class="widget-title">Newsletter</h3>
+                                <p>Receba as últimas novidades do mundo da fabricação digital diretamente no seu e-mail.</p>
+                                <form class="newsletter-form" action="/newsletter" method="post">
+                                    <label for="newsletter-email" class="sr-only">Seu e-mail</label>
+                                    <input id="newsletter-email" 
+                                           type="email" 
+                                           name="email" 
+                                           placeholder="Seu e-mail" 
+                                           required
+                                           autocomplete="email">
+                                    <button type="submit" class="btn-newsletter">
+                                        Inscrever-se
+                                    </button>
+                                </form>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Rodapé Aprimorado - Fab Lab Brasil -->
+        <footer class="footer-enhanced">
+            <div class="footer-container">
+                <!-- Seção Superior -->
+                <div class="footer-top">
+                    <div class="footer-grid">
+                        <!-- Seção da Marca -->
+                        <div class="footer-brand">
+                            <a href="index.html" class="footer-logo">
+                                <div class="footer-logo">
+                        <img src="https://institutofablabbrasil.org/wp-content/uploads/2021/04/cropped-cropped-Logo-Instituto-Site-2-180x179.png" alt="Fab Lab Brasil" width="80" height="80">
+                                </div>
+                                <div class="footer-logo-text"> Instituto Fab Lab Brasil</div>
+                            </a>
+                            
+                            <p class="footer-description">
+                                Centro de pesquisa, educação e inovação da FIRJAN que desenvolve talentos e capacitação para o futuro da indústria brasileira através de fabricação digital e tecnologias emergentes.
+                            </p>
+                            
+                            <!-- Redes Sociais -->
+                            <div class="footer-social">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            
+                            <!-- Certificações -->
+                            <div class="footer-certifications">
+                                <div class="certification-badge" title="Fab Foundation">FAB</div>
+                                <div class="certification-badge" title="FIRJAN">FIRJAN</div>
+                                <div class="certification-badge" title="ISO 9001">ISO</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Seção Programas -->
+                        <div class="footer-section">
+                            <h4>Programas</h4>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-graduation-cap"></i> MDEF</a></li>
+                                <li><a href="#"><i class="fas fa-certificate"></i> Fab Academy</a></li>
+                                <li><a href="#"><i class="fas fa-tools"></i> Workshops</a></li>
+                                <li><a href="#"><i class="fas fa-laptop"></i> Cursos Online</a></li>
+                                <li><a href="#"><i class="fas fa-users"></i> Mentoria</a></li>
+                                <li><a href="#"><i class="fas fa-handshake"></i> Parcerias</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Sobre -->
+                        <div class="footer-section">
+                            <h4>Sobre</h4>
+                            <ul>
+                                <li><a href="historia.html"><i class="fas fa-history"></i> Nossa História</a></li>
+                                <li><a href="equipe.html"><i class="fas fa-users"></i> Equipe</a></li>
+                                <li><a href="missao-visao.html"><i class="fas fa-bullseye"></i> Missão & Visão</a></li>
+                                <li><a href="instalacoes.html"><i class="fas fa-building"></i> Instalações</a></li>
+                                <li><a href="projetos.html"><i class="fas fa-project-diagram"></i> Projetos</a></li>
+                                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Serviços -->
+                        <div class="footer-section">
+                            <h4>Serviços</h4>
+                            <ul>
+                                <li><a href="#"><i class="fas fa-cube"></i> Impressão 3D</a></li>
+                                <li><a href="#"><i class="fas fa-cut"></i> Corte a Laser</a></li>
+                                <li><a href="#"><i class="fas fa-cogs"></i> CNC</a></li>
+                                <li><a href="#"><i class="fas fa-microchip"></i> Eletrônica</a></li>
+                                <li><a href="#"><i class="fas fa-robot"></i> Robótica</a></li>
+                                <li><a href="#"><i class="fas fa-lightbulb"></i> Consultoria</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Seção Contato e Newsletter -->
+                        <div class="footer-section">
+                            <!-- Informações de Contato -->
+                            <h4>Contato</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Endereço</strong><br>
+                                        Av. Graça Aranha, 1 - Centro<br>
+                                        Rio de Janeiro - RJ
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Telefone</strong><br>
+                                        (21) 3307-1000
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <strong>E-mail</strong><br>
+                                        contato@fablabbrasil.org
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Horário</strong><br>
+                                        Seg-Sex: 8h às 18h
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Newsletter -->
+                            <div class="footer-newsletter">
+                                <h5 class="newsletter-title">Newsletter</h5>
+                                <p class="newsletter-description">
+                                    Receba as últimas novidades sobre fabricação digital, cursos e eventos.
+                                </p>
+                                <form class="newsletter-form" id="newsletterForm">
+                                    <input 
+                                        type="email" 
+                                        class="newsletter-input" 
+                                        placeholder="Seu melhor e-mail"
+                                        required
+                                        aria-label="E-mail para newsletter"
+                                        id="newsletterEmail"
+                                    >
+                                    <button 
+                                        type="submit" 
+                                        class="newsletter-btn"
+                                        aria-label="Inscrever-se na newsletter"
+                                        id="newsletterBtn"
+                                    >
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção Inferior -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="footer-copyright">
+                            <p>&copy; 2025 Instituto Fab Lab Brasil - Fomentando a fabricação digital no Brasil - Todos os direitos reservados.</p>
+                        </div>
+                        
+                        <div class="footer-legal">
+                            <a href="#">Política de Privacidade</a>
+                            <a href="#">Termos de Uso</a>
+                            <a href="#">Cookies</a>
+                            <a href="contato.html">Contato</a>
+                            <a href="#">Acessibilidade</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="blog.js" defer></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    
+    <!-- Service Worker para PWA (opcional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
+
